@@ -1,0 +1,53 @@
+<div class="z-50 right-0 left-0 bg-[#69f0ae] flex top-0 text-gray-800 ">
+    <div class="px-5 lg:px-20 flex items-center h-16 justify-between">
+        <div class="flex items-center">
+            <div class="mr-5">
+                <img class="h-10"
+                    src="https://w7.pngwing.com/pngs/738/380/png-transparent-pacifier-soother-dummy-comforter-baby-blue-thumbnail.png"
+                    alt="Paridhan" />
+            </div>
+            <div class="">
+                <div class="flex items-center space-x-4">
+                    <a routerLink="/" class="text-white font-semibold text-lg">ParidhanVibes</a>
+                    <div>
+                        <button class="open-button" (click)="openNavBarContent('men')" style="color: white;" mat-button>
+                            Men
+                        </button>
+                    </div>
+                    <div>
+                        <button class="open-button" (click)="openNavBarContent('women')" style="color: white;"
+                            mat-button>
+                            Women
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex items-center">
+            <button (click)="navigateToCart('cart')" style="color: white;" mat-icon-button>
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+            <button mat-stroked-button color="accent" *ngIf="true" style="color: white;">Login</button>
+            <div *ngIf="false" class="ml-3 flex items-center">
+                <div class="flex flex-row items-center space-x-5">
+                    <button mat-button [matMenuTriggerFor]="profileMenu">
+                        <img class="h-5 w-5"
+                            src="https://static.everypixel.com/ep-pixabay/0329/8099/0858/84037/3298099085884037069-head.png"
+                            alt="userfoto" />
+                    </button>
+                    <mat-menu #profileMenu="matMenu">
+                        <button mat-menu-item>MyAccount</button>
+                        <button mat-menu-item>Orders</button>
+                        <button mat-menu-item>Logout</button>
+                    </mat-menu>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div *ngIf="isNavBarOpen" class="z-50 absolute left-0 right-0 model-container">
+    <app-nav-content [selectedSection]="currentSection"></app-nav-content>
+</div>

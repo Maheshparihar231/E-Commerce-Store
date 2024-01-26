@@ -13,7 +13,7 @@ export class MainCarouselComponent implements OnInit{
 
   ngOnInit(): void {
     this.carouselData= mainCarouselData;
-    this.autoplay()
+    //this.autoplay()
   }
 
   autoplay(){

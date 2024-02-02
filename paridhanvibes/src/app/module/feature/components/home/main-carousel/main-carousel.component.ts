@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { mainCarouselData } from 'src/Data/mainCarouselData';
+import { homeCarouselData } from 'src/Data/mainCarousel';
 
 @Component({
   selector: 'app-main-carousel',
@@ -7,24 +7,27 @@ import { mainCarouselData } from 'src/Data/mainCarouselData';
   styleUrls: ['./main-carousel.component.css']
 })
 export class MainCarouselComponent implements OnInit{
-  carouselData:any
-  currentSlide=0;
-  interval:any
+  carouselData=homeCarouselData;
 
-  ngOnInit(): void {
-    this.carouselData= mainCarouselData;
-    //this.autoplay()
+  currentSlide= 0;
+  interval: any;
+
+  ngOnInit() {
+    this.autoPlay();
   }
 
-  autoplay(){
-    setInterval(()=>{
+  autoPlay() {
+    setInterval(() => {
       this.nextSlide();
-      console.log(this.currentSlide);
-      
-    },2000)
+    }, 2000); 
   }
 
-  nextSlide(){
-    this.currentSlide=(this.currentSlide+1)%4;
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.carouselData.length;
+    //console.log("current slide - ", this.currentSlide)
+  }
+
+  prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.carouselData.length) % this.carouselData.length;
   }
 }

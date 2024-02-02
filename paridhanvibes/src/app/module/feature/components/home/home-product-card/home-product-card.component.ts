@@ -7,15 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./home-product-card.component.css']
 })
 export class HomeProductCardComponent {
-  @Input() product:any;
-  constructor(
-    private router:Router
-  ){}
-
-  navigate(){   
-    console.log("baja");
-     
-    this.router.navigate([`product-details/${5}`])
-  }
+  @Input() product:any | undefined;
 
 }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CartService } from 'src/app/state/Cart/cart.service';
 
 @Component({
   selector: 'app-cart-item',
@@ -7,14 +8,19 @@ import { Component, Input } from '@angular/core';
 })
 export class CartItemComponent {
 
-  @Input() showButton:any
+  @Input() product: any;
+  @Input() showButton: any;
 
-  updateCartItem(num:Number){
-    console.log(num);
-    
-  }
-  removeCartItem(){
-    console.log("remove items");
-    
+  constructor(private cartService: CartService) { }
+
+  updateCartItem = (quantity: number) => {
+    this.cartService.updateCartItem({
+      cartItemId: this.product.id,
+      data: { quantity: quantity + this.product.quantity },
+    });
+  };
+
+  removeCartItem() {
+    this.cartService.removeCartItem(this.product.id)
   }
 }

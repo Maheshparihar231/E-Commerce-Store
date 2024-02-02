@@ -1,6 +1,11 @@
 import { Component, HostListener } from '@angular/core';
+import { MatDialog, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { Router } from '@angular/router';
-
+import { AuthComponent } from 'src/app/module/auth/auth.component';
+import { Store, createSelector, select } from '@ngrx/store';
+import { AppState } from 'src/app/Models/AppState';
+import { UserService } from 'src/app/state/User/user.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,43 +13,117 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   
-  currentSection:any
-  isNavBarOpen:any;
+  isProfileMenuOpen: boolean = false;
+  userProfile: any;
+
+  dialogRef?: MatDialogRef<AuthComponent>;
+
+  selectUser = createSelector(
+    (state: AppState) => state.user,
+    (user) => user
+  );
+
   constructor(
-    private router:Router
-  ){}
-  
-  openNavBarContent(section:any){
-    this.isNavBarOpen=true
-    this.currentSection=section;
+    private dialog: MatDialog,
+    private router: Router,
+    private store: Store<AppState>,
+    private userService:UserService,
+    private _snackBar: MatSnackBar
+  ) {}
+
+  handleProfileMenuOpen() {
+    this.isProfileMenuOpen = !this.isProfileMenuOpen;
+    console.log('handle profile menu -------- ');
   }
-  
-  closeNavBarContent(){
-    this.isNavBarOpen=false
+
+  handleProfileMenuClose() {
+    this.isProfileMenuOpen = false;
   }
+
+  openLoginModal(): void {
+    this.dialog.open(AuthComponent, {
+      width: '400px',
+      disableClose: false,
+    });
+  }
+
+  navigateToCart = () => {
+    this.router.navigate(['cart']);
+  };
+
+ 
+
+  ngOnInit() {
+   
+   
+    if (localStorage.getItem('jwt')) this.userService.getUserProfile()
+
   
-  navigateToCart(path:string){
+
+    this.store.pipe(select((store:AppState)=>store.user)).subscribe((user)=>{
+      this.userProfile=user.userProfile;
+      if(user.userProfile){
+        this.dialog.closeAll()
+              }
+      
+    })
+
+    
+  }
+
+  dispatchGetUserProfileAction = () => {
+    // this.store.dispatch(getUserProfile());
+    this.userService.getUserProfile()
+  };
+
+  handleLogout = () => {
+    console.log('logout success');
+    this.userService.logout()
+  };
+
+  open: boolean = false;
+  selectedTabIndex: number = 0;
+
+  setOpen(open: boolean): void {
+    this.open = open;
+  }
+
+  isNavbarContentOpen = false;
+  currentSection!: string;
+
+  openNavbarContent(section: string) {
+    this.isNavbarContentOpen = true;
+    this.currentSection = section;
+    console.log('currentSection section ', this.currentSection);
+  }
+
+  closeNavbarContent() {
+    this.isNavbarContentOpen = false;
+  }
+  navigateTo(path:any){
     this.router.navigate([path])
   }
 
-  @HostListener('document:click',[`$event`])
-  onDocumentClick(event:MouseEvent){
-    const modelContainer = document.querySelector(".model-container");
-    const openButton = document.querySelectorAll(".open-button");
+  @HostListener('document:click', ['$event'])
+  onDocumentClick(event: MouseEvent) {
+    const modalContainer = document.querySelector('.modal-container');
+    const openButtons = document.querySelectorAll('.open-button');
 
-    let clickInsideButton=false;
+    let clickedInsideButton = false;
 
-    openButton.forEach((button)=>{
-      if(button.contains(event.target as Node)){
-        clickInsideButton=true
+    openButtons.forEach((button: Element) => {
+      if (button.contains(event.target as Node)) {
+        clickedInsideButton = true;
       }
-    })
-    if(modelContainer && !clickInsideButton && this.isNavBarOpen){
-      this.closeNavBarContent();
+    });
+
+    if (modalContainer && !clickedInsideButton && this.isNavbarContentOpen) {
+      console.log(
+        'container ---------------------- ',
+        this.isNavbarContentOpen
+      );
+      this.closeNavbarContent();
     }
   }
 
-  navigateTo(path:string){
-    this.router.navigate([path])
-  }
 }

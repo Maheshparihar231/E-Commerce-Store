@@ -10,18 +10,24 @@ import { PaymentSuccessComponent } from './module/feature/components/payment-suc
 import { OrderComponent } from './module/feature/components/order/order.component';
 import { OrderDetailComponent } from './module/feature/components/order-detail/order-detail.component';
 import { AdminRoutingModule } from './module/admin/admin-routing.module';
+import { SigninComponent } from './module/auth/signin/signin.component';
+import { SignupComponent } from './module/auth/signup/signup.component';
 
 const routes: Routes = [
-  {path:"admin",loadChildren:()=>import("./module/admin/admin-routing.module").then(m=>AdminRoutingModule) },
   {path:"",component:HomeComponent},
+  {path:"products",component:ProductsComponent},
   {path:"cart",component:CartComponent},
   {path:"product-details/:id",component:ProductDetailComponent},
   {path:"checkout",component:CheckoutComponent},
   {path:"checkout/payment/:id",component:PaymentComponent},
   {path:"payment-success",component:PaymentSuccessComponent},
-  {path:':lavelOne/:lavelTwo:/lavelThree',component:ProductsComponent},
-  {path:"account/orders",component:OrderComponent},
-  {path:"order/:id",component:OrderDetailComponent},
+  {path:'login',component:SigninComponent},
+  {path:'register',component:SignupComponent},
+  { path: ':lavelOne/:lavelTwo/:lavelThree', component: ProductsComponent },
+  { path: 'order-summery', component: ProductsComponent },
+  { path: 'account/orders', component: OrderComponent },
+  { path: 'order/:orderId', component: OrderDetailComponent },
+  {path: 'admin',loadChildren:()=>import("./module/admin/admin-routing.module").then(m=>m.AdminRoutingModule)}
   
 ];
 

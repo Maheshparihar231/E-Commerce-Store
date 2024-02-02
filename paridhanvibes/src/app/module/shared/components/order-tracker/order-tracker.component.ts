@@ -6,6 +6,8 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./order-tracker.component.css']
 })
 export class OrderTrackerComponent {
-  @Input() activeStep:any
+  
+  @Input() activeStep: any
   @Input() steps:any
+  
 }

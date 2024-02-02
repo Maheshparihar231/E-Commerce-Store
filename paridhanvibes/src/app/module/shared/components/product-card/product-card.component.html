@@ -1,33 +1,19 @@
-<div (click)="navigate()" class="productcard w-[17rem] m-3 transition-all cursor-pointer">
-    <div class="h-[20rem]">
-        <img 
-            [src]="product.imageUrl"
-            alt="product image"
-            class="h-full w-full"
-            />
+<div  class='productCard w-[17rem] m-3 transition-all cursor-pointer '>
+    <div class='h-[20rem]'>
+        <img class='h-full w-full object-cover object-left-top' [src]='product.imageUrl' alt="" />
     </div>
-    <div class="textpart p-3 bg-[#181818]">
-        <div class="text-left">
-            <p class="opacity-80">
-                {{product.brand}}
-            </p>
-            <p>
-                {{product.title}}
-            </p>
-            <p class="text-gray-600">
-                {{product.color}}
-            </p>
+    <div class='textPart  p-3 bg-[#0b0b0b] rounded-b-md'>
+        <div>
+            <p class=' opacity-80'>{{product.brand}}</p>
+            <p  class=''>{{product.title}}</p>
+            <p class='text-gray-600'>{{product.color}}</p>
         </div>
-        <div class="flex flex-wrap space-x-2 items-center">
-            <p class="font-bold">
-                ₹{{product.discountedPrice}}
-            </p>
-            <p class="text-gray-400 line-through">
-                ₹{{product.price}}
-            </p>
-            <p class="text-green-400 font-semibold">
-                {{product.discountPersent}} %
-            </p>
+        
+        <div class='flex space-x-2 items-center'>
+            <p class='font-semibold'>₹{{product.discountedPrice}}</p>
+            <p class='text-gray-600 line-through'>₹{{product.price}}</p>
+            <p class='text-green-600 font-semibold'>{{product.discountPersent}}%</p>
         </div>
+        
     </div>
-</div>
+   </div>

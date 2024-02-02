@@ -8,15 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent {
-  @Input() product:any;
-  constructor(
-    private router:Router,
-  ){}
+  @Input() product:any ;
 
-  navigate(){   
-    console.log("baja");
-     
-    this.router.navigate([`product-details/${5}`])
-  }
+  products = [1, 1, 1, 1, 1];
 
 }

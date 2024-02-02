@@ -1,4 +1,4 @@
-export const gouns=[
+export const gounsPage1=[
     {
         "imageUrl": "https://rukminim1.flixcart.com/image/612/612/kw5ag7k0/kurta/f/j/g/xxl-sg1011-sanganeri-feb-original-imag8w9xbbakjkju.jpeg?q=70",
         "brand": "Riya Creation",
@@ -270,7 +270,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/i/0/w/na-m-short-sleeve-stitched-gown-femvy-na-original-imag3hyesubkhaxw.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/i/0/w/na-m-short-sleeve-stitched-gown-femvy-na-original-imag3hyesubkhaxw.jpeg?q=70",
         "brand": "Femvy",
         "title": "Solid Georgette Stitched Flared/A-line Gown",
         "color": "Blue",
@@ -280,7 +280,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/kpcy5jk0/gown/s/6/a/na-m-short-sleeve-stitched-ss-04-jash-creation-na-original-imag3hye6t6jykyf.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/kpcy5jk0/gown/s/6/a/na-m-short-sleeve-stitched-ss-04-jash-creation-na-original-imag3hye6t6jykyf.jpeg?q=70",
         "brand": "Femvy",
         "title": "Solid Georgette Stitched Flared/A-line Gown",
         "color": "Black",
@@ -290,7 +290,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/j/t/t/na-l-3-4-sleeve-stitched-rite1052-ftdiva-na-original-imafwphybsq4x9pg.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/j/t/t/na-l-3-4-sleeve-stitched-rite1052-ftdiva-na-original-imafwphybsq4x9pg.jpeg?q=70",
         "brand": "ftDiva",
         "title": "Paisley Rayon Blend Stitched Anarkali Gown",
         "color": "Pink",
@@ -300,7 +300,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/6/j/l/na-free-half-sleeve-semi-stitched-bolly-07-zinariya-fab-na-original-imag45ykcssh6sqw-bb.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/6/j/l/na-free-half-sleeve-semi-stitched-bolly-07-zinariya-fab-na-original-imag45ykcssh6sqw-bb.jpeg?q=70",
         "brand": "Zinariya Fab",
         "title": "Embroidered Net Semi Stitched Anarkali Gown",
         "color": "Grey",
@@ -310,7 +310,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/i/0/w/na-m-short-sleeve-stitched-gown-femvy-na-original-imag3hyesubkhaxw.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/i/0/w/na-m-short-sleeve-stitched-gown-femvy-na-original-imag3hyesubkhaxw.jpeg?q=70",
         "brand": "Femvy",
         "title": "Solid Georgette Stitched Flared/A-line Gown",
         "color": "Blue",
@@ -320,7 +320,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/h/r/t/free-half-sleeve-semi-stitched-ngb-01-life-sky-original-imag3vxzhbj7rudx.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/h/r/t/free-half-sleeve-semi-stitched-ngb-01-life-sky-original-imag3vxzhbj7rudx.jpeg?q=70",
         "brand": "Zinariya Fab",
         "title": "Net Semi Stitched Anarkali Gown",
         "color": "Green",
@@ -330,7 +330,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/f/o/s/na-xl-3-4-sleeve-stitched-ss-40-femvy-na-original-imaggsg6dgyk3hgw.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/f/o/s/na-xl-3-4-sleeve-stitched-ss-40-femvy-na-original-imaggsg6dgyk3hgw.jpeg?q=70",
         "brand": "Femvy",
         "title": "Dyed Georgette Stitched Anarkali Gown",
         "color": "Red",
@@ -340,7 +340,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/k4u7i4w0/gown/y/e/x/na-free-a-1-jeelraj-na-original-imaepspfjvnt3gme.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/k4u7i4w0/gown/y/e/x/na-free-a-1-jeelraj-na-original-imaepspfjvnt3gme.jpeg?q=70",
         "brand": "Smart Shop",
         "title": "Embroidered Net Semi Stitched Anarkali Gown",
         "color": "White",
@@ -350,7 +350,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/b/a/d/n-a-s-3-4-sleeve-stitched-r81-ftdiva-n-a-original-imagg2znwfwudqkc.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/gown/b/a/d/n-a-s-3-4-sleeve-stitched-r81-ftdiva-n-a-original-imagg2znwfwudqkc.jpeg?q=70",
         "brand": "ftDiva",
         "title": "Floral Print Rayon Blend Stitched Anarkali Gown",
         "color": "Pink",
@@ -360,7 +360,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/kqidx8w0/gown/m/r/j/n-a-xxl-3-4-sleeve-stitched-r88-ftdiva-n-a-original-imag4g39jmnzb7qw.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/kqidx8w0/gown/m/r/j/n-a-xxl-3-4-sleeve-stitched-r88-ftdiva-n-a-original-imag4g39jmnzb7qw.jpeg?q=70",
         "brand": "ftDiva",
         "title": "Printed Rayon Blend Stitched Anarkali Gown",
         "color": "Blue",
@@ -370,7 +370,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/j/c/y/free-half-sleeve-semi-stitched-ss-ng-1-r4mila-original-imaggp3bzzwtzshc.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/j/c/y/free-half-sleeve-semi-stitched-ss-ng-1-r4mila-original-imaggp3bzzwtzshc.jpeg?q=70",
         "brand": "Zinariya Fab",
         "title": "Embroidered Net Semi Stitched Anarkali Gown",
         "color": "Purple",
@@ -380,7 +380,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/w/0/q/free-half-sleeve-semi-stitched-ngb-01-life-sky-original-imag4pv7rbb2cgzb.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/w/0/q/free-half-sleeve-semi-stitched-ngb-01-life-sky-original-imag4pv7rbb2cgzb.jpeg?q=70",
         "brand": "Zinariya Fab",
         "title": "Net Semi Stitched Anarkali Gown",
         "color": "Green",
@@ -390,7 +390,7 @@ export const gouns=[
         "size": ""
     },
     {
-        "image": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/h/o/4/free-half-sleeve-semi-stitched-ngb-01-life-sky-original-imag7vdaybd4qazn.jpeg?q=70",
+        "imageUrl": "https://rukminim1.flixcart.com/image/612/612/xif0q/shopsy-gown/h/o/4/free-half-sleeve-semi-stitched-ngb-01-life-sky-original-imag7vdaybd4qazn.jpeg?q=70",
         "brand": "Zinariya Fab",
         "title": "Embroidered Net Semi Stitched Anarkali Gown",
         "color": "Red",

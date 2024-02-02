@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-slider',
@@ -8,4 +9,13 @@ import { Component, Input } from '@angular/core';
 export class ProductSliderComponent {
   @Input() title:any;
   @Input() products:any;
+
+  constructor(private router:Router) {
+    
+  }
+
+  navigateToProducts(){
+    console.log("navigate tot products")
+    this.router.navigate(["/products"])
+  }
 }

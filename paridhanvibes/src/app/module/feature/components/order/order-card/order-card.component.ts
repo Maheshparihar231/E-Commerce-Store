@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store, select } from '@ngrx/store';
+import { AppState } from 'src/app/Models/AppState';
+import { OrderService } from 'src/app/state/Order/order.service';
 
 @Component({
   selector: 'app-order-card',
@@ -8,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class OrderCardComponent {
   
-  
-  
+  @Input()orderItem:any;
 
 }

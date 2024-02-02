@@ -27,6 +27,13 @@ import { AddressFormComponent } from './components/checkout/address-form/address
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { OrderCardComponent } from './components/order/order-card/order-card.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BarRatingModule } from 'ngx-bar-rating';
+import {
+  NguCarouselModule
+} from '@ngu/carousel';
+import { RouterModule } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +52,7 @@ import { OrderCardComponent } from './components/order/order-card/order-card.com
     OrderDetailComponent,
     ProductReviewCardComponent,
     AddressFormComponent,
-    OrderCardComponent,
+    OrderCardComponent,    
   ],
   imports: [
     CommonModule,
@@ -59,9 +66,17 @@ import { OrderCardComponent } from './components/order/order-card/order-card.com
     MatRadioModule,
     MatProgressBarModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatCheckboxModule,
+    MatRadioModule,
+    MatProgressBarModule,
+    MatPaginatorModule,
+    BarRatingModule,
+    NguCarouselModule,
+
   ],
   exports:[
     FeatureComponent,

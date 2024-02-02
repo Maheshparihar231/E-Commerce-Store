@@ -108,11 +108,11 @@ All protected endpoints require the `Authorization` header with a valid token.
 
 ## Contact
 
-For any queries or issues, please contact **Ashok Zarmariya** at `ashokzarmariya@gmail.com`.
+For any queries or issues, please contact **Owner** at `maheshparihar20019@gmail.com`.
 
 ## License
 
-This API is licensed under **Ashok Zarmariya**.
+Open Source
 
 
 
